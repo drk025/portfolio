@@ -3,13 +3,13 @@ import React from 'react'
 export default function Contact() {
     return (
         <section id="contact">
-            <div className='flex flex-col lg:flex-row justify-between m-16 gap-4 py-8'>
-                <div className='p-5'>
-                    <h1 className='text-5xl font-bold mb-10 '>Feel Free to <br />Share Your Thoughts</h1>
+            <div className='flex flex-col  lg:flex-row justify-between m-16 gap-4 py-8'>
+                <div className='p-0'>
+                    <h1 className='lg:text-5xl text-3xl font-bold mb-10 '>Feel Free to <br />Share Your Thoughts</h1>
 
-                    <div className='flex flex-col justify-around ie'>
+                    <div className='flex flex-col justify-around '>
 
-                        <div className='flex mb-8'>
+                        {/* <div className='flex mb-8'>
                             <div className='mr-6'>
 
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -17,7 +17,7 @@ export default function Contact() {
                                 </svg>
                             </div>
                             +977 9841457507
-                        </div>
+                        </div> */}
 
                         <div className='flex mb-8'>
                             <div className='mr-6'>

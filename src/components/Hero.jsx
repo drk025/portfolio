@@ -22,7 +22,7 @@ function Hero() {
                         </div>
                         <div />
                     </div>
-                    <div className=' p-4 rounded-xl bg-black text-white w-48 text-center mt-8 hover:bg-slate-900'>Explore Courses</div>
+                    <div className=' p-4 rounded-xl  sm:text-md bg-black text-white w-48 text-center mt-8 hover:bg-slate-900'>Explore Courses</div>
 
                 </div>
             </div>
