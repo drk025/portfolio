@@ -20,7 +20,7 @@ export default function () {
                     <div className='text-xl font-bold'>
                         Dansuram Koirala
                     </div>
-                    <div>
+                    <div>z
                         Masters Degree in Chemistry
                         <br /> Tribhuvan University
                     </div>

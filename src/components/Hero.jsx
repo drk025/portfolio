@@ -11,7 +11,7 @@ function Hero() {
             <div>
 
                 <div>
-                    <div className='text-3xl font-bold py-6 text-cyan-700 '>Welcome to my portfolio!</div>
+                    <div className='text-3xl font-bold py-6 text-blue-700 '>Welcome to my portfolio!</div>
                     <h2 className='text-xl font-bold pb-8 '> I'm Dansuram Koirala, a passionate chemistry teacher <br /> dedicated to inspiring curiosity and fostering <br /> a love for science in my students.</h2>
                     <div className="stats-container flex space-x-4 py-4 pt-8">
                         <div className="experience">
