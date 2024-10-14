@@ -30,7 +30,7 @@ export default function NavBar() {
           >
             <div>Subject Materials</div>
             <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
             </svg>
           </button>
           {isDropdownOpen && (
@@ -42,7 +42,7 @@ export default function NavBar() {
                 className='block px-4 py-2 text-sm text-gray-700 hover:text-gray-500'
                 onClick={() => setDropdownOpen(false)} // Close dropdown on click
               >
-                Neb-XI
+                Grade-XI
               </Link>
               <Link
                 to="subject-materials-neb-xii"
@@ -51,7 +51,7 @@ export default function NavBar() {
                 className='block px-4 py-2 text-sm text-gray-700 hover:text-gray-500'
                 onClick={() => setDropdownOpen(false)} // Close dropdown on click
               >
-                Neb-XII
+                Grade-XII
               </Link>
             </div>
           )}
@@ -74,11 +74,11 @@ export default function NavBar() {
           {/* Subject Materials dropdown in mobile menu */}
           <button
             onClick={toggleDropdown}
-            className='block px-4 py-2 text-sm text-gray-700 w-full text-left focus:outline-none flex items-center'
+            className='px-4 py-2 text-sm text-gray-700 w-full text-left focus:outline-none flex items-center'
           >
             <span>Subject Materials</span>
             <svg className="w-2.5 h-2.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
             </svg>
           </button>
           {/* {isDropdownOpen && (
