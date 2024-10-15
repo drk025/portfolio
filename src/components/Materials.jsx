@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ResourceCard from './ResourceCard';
+import { Link } from 'react-router-dom';
 
 // Grade XI resources
 const gradeXIResources = [
@@ -49,43 +50,54 @@ const gradeXIIResources = [
     }
 ];
 
-export default function App() {
+export default function Materials() {
     const [selectedGrade, setSelectedGrade] = useState('XI'); // Initial state is Grade XI
 
     // Determine which resources to display based on the selected grade
     const resources = selectedGrade === 'XI' ? gradeXIResources : gradeXIIResources;
 
     return (
-        <div className="flex flex-col items-center p-6">
-            <h1 className="text-2xl font-bold mb-6">Chemistry Subject Materials</h1>
-
-            {/* Grade Selector */}
-            <div className="mb-6">
-                <button
-                    className={`px-4 py-2 mr-2 hover:bg-gray-400 font-bold ${selectedGrade === 'XI' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                    onClick={() => setSelectedGrade('XI')}
-                >
-                    Grade XI
-                </button>
-                <button
-                    className={`px-4 py-2 font-bold hover:bg-gray-400 ${selectedGrade === 'XII' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
-                    onClick={() => setSelectedGrade('XII')}
-                >
-                    Grade XII
-                </button>
+        <section id='subjectmaterials' className="flex flex-col m-4  p-6 items-center md:items-end">
+            <div className='flex items-end space-x-2 hover:text-green-600 cursor-pointer m-4 justify-center md:justify-end'>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-8 8a1 1 0 001.414 1.414L4 10.414V19a2 2 0 002 2h3a1 1 0 001-1v-5a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 001 1h3a2 2 0 002-2v-8.586l1.293 1.293a1 1 0 001.414-1.414l-8-8z" />
+                </svg>
+                <Link to='/' >Home</Link>
             </div>
 
-            {/* Resource Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {resources.map((resource, index) => (
-                    <ResourceCard
-                        key={index}
-                        title={resource.title}
-                        desc={resource.desc}
-                        link={resource.link}
-                    />
-                ))}
+            <div className='items-center'>
+                <div className='flex flex-row justify-around  space-x-4'>
+                    <div>
+                        <h1 className="text-2xl font-bold mb-6">Chemistry Subject Materials</h1>
+                    </div>
+                </div>
+                {/* Grade Selector */}
+                <div className="mb-6 items-center">
+                    <button
+                        className={`px-4 py-2 mr-2 hover:bg-gray-400 font-bold ${selectedGrade === 'XI' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        onClick={() => setSelectedGrade('XI')}
+                    >
+                        Grade XI
+                    </button>
+                    <button
+                        className={`px-4 py-2 font-bold hover:bg-gray-400 ${selectedGrade === 'XII' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+                        onClick={() => setSelectedGrade('XII')}
+                    >
+                        Grade XII
+                    </button>
+                </div>
+                {/* Resource Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {resources.map((resource, index) => (
+                        <ResourceCard
+                            key={index}
+                            title={resource.title}
+                            desc={resource.desc}
+                            link={resource.link}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 }

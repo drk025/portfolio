@@ -16,7 +16,7 @@ function ResourceCard({ title, desc, link }) {
                 </div>
                 <button
                     onClick={toggleExpand}
-                    className="text-blue-500 mt-2 focus:outline-none"
+                    className="text-blue-500 mt-2 focus:outline-none "
                 >
                     {isExpanded ? 'Show Less' : 'Read More'}
                 </button>
