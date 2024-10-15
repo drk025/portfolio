@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link as LinkScroll} from "react-scroll";
+import {Link as LinkRouter} from "react-router-dom";
 
 function Footer() {
   return (
@@ -15,13 +17,13 @@ function Footer() {
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                 <li>
-                    <a href="#about" className="hover:underline me-4 md:me-6">About</a>
+                    <LinkScroll to="about" className="hover:underline me-4 md:me-6 cursor-pointer">About</LinkScroll>
                 </li>
                 <li>
-                    <a href="#subject-materials" className="hover:underline me-4 md:me-6">Subject Materials</a>
+                    <LinkRouter to="subjectmaterials" className="hover:underline me-4 md:me-6 cursor-pointer">Subject Materials</LinkRouter>
                 </li>
                 <li>
-                    <a href="#contact" className="hover:underline me-4 md:me-6">Contact</a>
+                    <LinkScroll to="contact" className="hover:underline me-4 md:me-6 cursor-pointer">Contact</LinkScroll>
                 </li>
                 {/* <li>
                     <a href="#" className="hover:underline">Contact</a>

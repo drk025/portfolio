@@ -57,7 +57,7 @@ export default function Materials() {
     const resources = selectedGrade === 'XI' ? gradeXIResources : gradeXIIResources;
 
     return (
-        <section id='subjectmaterials' className="flex flex-col m-4  p-6 items-center md:items-end">
+        <section id='subjectmaterials' className="flex flex-col m-4 mt-0   p-6 items-center md:items-end">
             <div className='flex items-end space-x-2 hover:text-green-600 cursor-pointer m-4 justify-center md:justify-end'>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                     <path d="M10.707 2.293a1 1 0 00-1.414 0l-8 8a1 1 0 001.414 1.414L4 10.414V19a2 2 0 002 2h3a1 1 0 001-1v-5a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 001 1h3a2 2 0 002-2v-8.586l1.293 1.293a1 1 0 001.414-1.414l-8-8z" />
@@ -68,7 +68,7 @@ export default function Materials() {
             <div className='items-center'>
                 <div className='flex flex-row justify-around  space-x-4'>
                     <div>
-                        <h1 className="text-2xl font-bold mb-6">Chemistry Subject Materials</h1>
+                        <div className="text-xl md:text-2xl font-bold mb-6">Chemistry Subject Materials</div>
                     </div>
                 </div>
                 {/* Grade Selector */}
