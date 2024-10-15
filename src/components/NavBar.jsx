@@ -16,7 +16,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className={`flex justify-end space-x-6 font-semibold px-8 ${burgerOn ? 'mb-32' : 'mb-8'}`}>
+    <nav className={`flex justify-end space-x-6 bg-primary font-semibold px-8 ${burgerOn ? 'mb-32' : 'mb-8'}`}>
 
       {/* Desktop Menu */}
       <div className='hidden md:p-6 md:flex md:justify-end md:space-x-6'>
@@ -29,11 +29,11 @@ export default function NavBar() {
             className='font-semibold focus:outline-none flex items-center'
           >
             <div>Subject Materials</div>
-            <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            {/* <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
-            </svg>
+            </svg> */}
           </button>
-          {isDropdownOpen && (
+          {/* {isDropdownOpen && (
             <div className='absolute right-0 mt-2 w-48 bg-transparent shadow-lg rounded-md z-10'>
               <Link
                 to="subject-materials-neb-xi"
@@ -54,7 +54,7 @@ export default function NavBar() {
                 Grade-XII
               </Link>
             </div>
-          )}
+          )} */}
         </div>
         <Link to="contact" smooth={true} duration={700} className="cursor-pointer">Contact</Link>
       </div>
