@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { Link as LinkScroll } from "react-scroll";
 import { Link as LinkRouter } from "react-router-dom";
 
@@ -20,19 +20,38 @@ function Footer() {
           </div>
           <ul className="flex flex-wrap gap-6 text-sm font-medium text-warm-200">
             <li>
-              <LinkScroll to="about" className="hover:text-terracotta cursor-pointer transition-colors">About</LinkScroll>
+              <LinkScroll
+                to="about"
+                className="hover:text-terracotta cursor-pointer transition-colors"
+              >
+                About
+              </LinkScroll>
             </li>
             <li>
-              <LinkRouter to="/subjectmaterials" className="hover:text-terracotta transition-colors">Subject Materials</LinkRouter>
+              <LinkRouter
+                to="/subjectmaterials"
+                className="hover:text-terracotta transition-colors"
+              >
+                Subject Materials
+              </LinkRouter>
             </li>
             <li>
-              <LinkScroll to="contact" className="hover:text-terracotta cursor-pointer transition-colors">Contact</LinkScroll>
+              <LinkScroll
+                to="contact"
+                className="hover:text-terracotta cursor-pointer transition-colors"
+              >
+                Contact
+              </LinkScroll>
             </li>
           </ul>
         </div>
 
         <div className="border-t border-warm-600 mt-8 pt-6 text-sm text-warm-200 text-center">
-          © 2023 <a href="#" className="hover:text-terracotta transition-colors">Dansuram Koirala™</a>. All Rights Reserved.
+          © 2023{" "}
+          <a href="#" className="hover:text-terracotta transition-colors">
+            Dansuram Koirala™
+          </a>
+          . All Rights Reserved.
         </div>
       </div>
     </footer>
