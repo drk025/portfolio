@@ -3,12 +3,11 @@ import Materials from '../components/Materials'
 
 export default function SubjectMaterials() {
   return (
-    <div className='bg-primary_sbj'>
-        <Materials/>
-<span className=" inset-x-0 bottom-0 pb-8 w-full block text-sm text-gray-500 text-center dark:text-gray-400">
-  © 2023 <a href="#" className="hover:underline">Dansuram Koirala™</a>. All Rights Reserved.
-</span>
-
+    <div className='bg-cream min-h-screen'>
+      <Materials />
+      <span className="block text-sm text-brown-light text-center pb-8">
+        © 2023 <a href="#" className="hover:text-terracotta transition-colors">Dansuram Koirala™</a>. All Rights Reserved.
+      </span>
     </div>
   )
 }

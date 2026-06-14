@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -8,27 +8,22 @@ html,
 body,
 #root,
 .app {
-  font-family: 'Poppins';
-  @apply  text-gray-700 bg-gray-100
+  font-family: 'Poppins', sans-serif;
+  @apply text-brown-warm bg-cream;
 }
+
 a:hover {
-  @apply transition duration-200;
-  @apply text-gray-700
+  @apply transition duration-200 text-terracotta;
 }
 
-.button{
-  @apply rounded-full text-sm border-2  border-none py-2 px-4 text-white bg-black hover:bg-green-900 hover:text-gray-100 
-}
-.hero-button{
-    @apply  border-solid border-2 mt-6 mb-6  border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-gray-100 dark:hover:bg-orange-400
+.section-divider {
+  @apply w-16 h-1 bg-terracotta rounded-full mb-6;
 }
 
-.how-work-button{
-  @apply  inline-block border-solid border-2 mt-6 mb-6  border-gray-300 py-2 px-4 hover:bg-gray-700 hover:text-gray-100 dark:hover:bg-orange-400
-
+.warm-card {
+  @apply bg-white rounded-2xl shadow-md border border-warm-100 hover:shadow-lg transition-shadow duration-300;
 }
 
-/* Stepper  */
-/* .step-item{
-  @apply relative flex flex-col justify-center items-center w-36;
-} */
+.input-warm {
+  @apply w-full py-3 px-4 rounded-xl border border-warm-200 bg-warm-50 text-brown-warm placeholder-warm-300 focus:outline-none focus:ring-2 focus:ring-terracotta focus:border-transparent transition;
+}
