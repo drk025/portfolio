@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // Converts a Google Drive/Slides share URL to an embeddable URL
 function toEmbedUrl(url) {
@@ -15,7 +15,7 @@ function toEmbedUrl(url) {
   return url;
 }
 
-function ResourceCard({ title, desc, link, type = 'file' }) {
+function ResourceCard({ title, desc, link, type = "file" }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showEmbed, setShowEmbed] = useState(false);
   const embedUrl = toEmbedUrl(link);
@@ -25,14 +25,27 @@ function ResourceCard({ title, desc, link, type = 'file' }) {
       <div className="p-6">
         {/* Icon */}
         <div className="w-10 h-10 bg-warm-100 rounded-xl flex items-center justify-center text-terracotta mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-5 h-5">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-5 h-5"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+            />
           </svg>
         </div>
 
         <div className="text-lg font-bold text-brown-warm mb-2">{title}</div>
 
-        <div className={`text-brown-light text-sm leading-relaxed ${isExpanded ? '' : 'line-clamp-2'}`}>
+        <div
+          className={`text-brown-light text-sm leading-relaxed ${isExpanded ? "" : "line-clamp-2"}`}
+        >
           {desc}
         </div>
         {desc && (
@@ -40,7 +53,7 @@ function ResourceCard({ title, desc, link, type = 'file' }) {
             onClick={() => setIsExpanded(!isExpanded)}
             className="text-terracotta text-sm mt-1 hover:underline focus:outline-none"
           >
-            {isExpanded ? 'Show Less' : 'Read More'}
+            {isExpanded ? "Show Less" : "Read More"}
           </button>
         )}
 
@@ -62,8 +75,19 @@ function ResourceCard({ title, desc, link, type = 'file' }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-warm-100 text-brown-warm text-sm font-medium px-4 py-2 rounded-full hover:bg-warm-200 transition-colors"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+              />
             </svg>
             Open
           </a>
@@ -77,7 +101,7 @@ function ResourceCard({ title, desc, link, type = 'file' }) {
             src={embedUrl}
             title={title}
             className="w-full"
-            style={{ height: '420px' }}
+            style={{ height: "420px" }}
             allowFullScreen
             loading="lazy"
           />
