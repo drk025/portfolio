@@ -18,7 +18,10 @@ function toEmbedUrl(url) {
 function ResourceCard({ title, desc, link, type = "file" }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [showEmbed, setShowEmbed] = useState(false);
-  const embedUrl = toEmbedUrl(link);
+
+  // Ensure link is always an absolute URL — never a relative path
+  const safeLink = link && (link.startsWith('http://') || link.startsWith('https://')) ? link : null;
+  const embedUrl = safeLink ? toEmbedUrl(safeLink) : null;
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-warm-100 overflow-hidden hover:shadow-md transition-shadow duration-300">
@@ -69,28 +72,21 @@ function ResourceCard({ title, desc, link, type = "file" }) {
             </svg>
             {showEmbed ? 'Close' : 'View'}
           </button> */}
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-warm-100 text-brown-warm text-sm font-medium px-4 py-2 rounded-full hover:bg-warm-200 transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-4 h-4"
+          {safeLink ? (
+            <a
+              href={safeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-warm-100 text-brown-warm text-sm font-medium px-4 py-2 rounded-full hover:bg-warm-200 transition-colors"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-              />
-            </svg>
-            Open
-          </a>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+              Open
+            </a>
+          ) : (
+            <span className="text-xs text-warm-300 italic">No link available</span>
+          )}
         </div>
       </div>
 
